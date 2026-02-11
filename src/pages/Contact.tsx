@@ -131,9 +131,14 @@ const Contact = () => {
                       <Linkedin className="h-4 w-4 text-primary" />
                       <h3 className="text-sm font-semibold text-foreground">LinkedIn</h3>
                     </div>
-                    <Badge variant="secondary" className="rounded-full">
-                      Add your LinkedIn URL
-                    </Badge>
+                    <a
+                      href="https://www.linkedin.com/in/meg-ma%C5%82gorzata-kowalew-10ab471b/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-full bg-secondary px-3 py-1.5 text-sm text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+                    >
+                      LinkedIn Profile
+                    </a>
                   </CardContent>
                 </Card>
 
