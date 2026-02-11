@@ -1,0 +1,231 @@
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { motion } from "framer-motion";
+import { User } from "lucide-react";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 24 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: { delay: i * 0.08, duration: 0.5, ease: "easeOut" as const },
+  }),
+};
+
+const About = () => {
+  return (
+    <div className="mx-auto max-w-5xl px-6 py-12 sm:py-16">
+      {/* Hero Section */}
+      <motion.div
+        initial="hidden"
+        animate="visible"
+        variants={{ visible: { transition: { staggerChildren: 0.1 } } }}
+      >
+        <motion.div variants={fadeUp} custom={0}>
+          <Card className="mb-8 border bg-card">
+            <CardContent className="p-6 sm:p-8">
+              <div className="flex flex-col gap-8 lg:flex-row">
+                {/* Left: Avatar + Bio */}
+                <div className="flex-1">
+                  <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                    <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
+                      <User className="h-14 w-14 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h1 className="mb-3 text-xl font-bold text-foreground sm:text-2xl">
+                        Product leader across SaaS, Marketplace and Payments
+                      </h1>
+                      <p className="text-sm leading-relaxed text-muted-foreground">
+                        Product leader with 15 years of turning vision into outcomes. I've run
+                        cross-functional teams and entire product suites—setting strategy,
+                        coaching PMs and designers, and shipping software that moves the
+                        numbers. Most recently I owned the product experience at New
+                        Zealand's top-rated real-estate app, and its supporting platform. I
+                        have experience translating user needs of enterprise groups into
+                        scalable B2B across SaaS products, payments, real estate and
+                        ecommerce solutions while keeping the consumer front and centre. I
+                        empower teams to discover, validate and launch work that delivers
+                        user value first and business value right behind it. I have recently
+                        relocated to Melbourne and ready for my next challenge.
+                      </p>
+                      <div className="mt-4 flex flex-wrap gap-2">
+                        {["SaaS", "Payments", "Marketplace", "PropTech"].map((tag) => (
+                          <Badge key={tag} variant="secondary" className="rounded-full">
+                            {tag}
+                          </Badge>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Right: Quick Profile */}
+                <div className="lg:w-72">
+                  <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+                    Quick Profile
+                  </h2>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      15+ product management experience
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      Product strategy: vision → roadmap → outcomes
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      Positioning & pricing
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      B2C, B2B, and B2B2C models
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      Acquisition and post-merger integration
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      AI-powered recommendations and personalisation
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      Mobile apps, websites, and internal tools/workflows
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      User research practice; discovery coaching
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      Melbourne-based
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
+
+        {/* How I work + What I'm looking for */}
+        <div className="grid gap-8 lg:grid-cols-2">
+          <motion.div variants={fadeUp} custom={1}>
+            <Card className="h-full border bg-card">
+              <CardContent className="p-6 sm:p-8">
+                <h2 className="mb-4 text-lg font-bold text-foreground">How I work</h2>
+                <ul className="mb-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    Turning ambiguous problems into an aligned roadmap teams can ship against.
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    Designing journeys that reduce friction and lift conversion.
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    Building product capability: research, product marketing, and objective-driven planning.
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    Scaling multi-product portfolios (incl. payments) with strong operating rhythms.
+                  </li>
+                </ul>
+
+                <h3 className="mb-3 text-base font-bold text-foreground">Day-to-day</h3>
+                <div className="grid grid-cols-2 gap-6">
+                  <div>
+                    <h4 className="mb-2 text-sm font-semibold text-foreground">Frameworks</h4>
+                    <ul className="space-y-1.5 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        North-star metrics, OKRs, outcome roadmaps
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        Assumptions mapping, experiment design, AB testing
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        Growth loops
+                      </li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4 className="mb-2 text-sm font-semibold text-foreground">Tools</h4>
+                    <ul className="space-y-1.5 text-sm text-muted-foreground">
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        Jira, Confluence, Miro, Prouctboard, Roadmunk
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        Figma, Loveable, Replit
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        HotJar, Maze, UserTesting
+                      </li>
+                      <li className="flex items-start gap-2">
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                        AirOps, Braze
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="mt-6 space-y-1.5 text-sm text-muted-foreground">
+                  <p>
+                    <span className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span><strong className="text-foreground">Masters Of Economic Sciences</strong> — Poznan University of Economics</span>
+                    </span>
+                  </p>
+                  <p>
+                    <span className="flex items-start gap-2">
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                      <span><strong className="text-foreground">Recent courses:</strong> Reforge AI Strategy, Reforge AI Leadership</span>
+                    </span>
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+
+          <motion.div variants={fadeUp} custom={2}>
+            <Card className="h-full border bg-card">
+              <CardContent className="p-6 sm:p-8">
+                <h2 className="mb-4 text-lg font-bold text-foreground">What I'm looking for</h2>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  I am now looking for a role where product is expected to lead measurable
+                  outcomes—growth, retention, revenue, or step-change capability—and where I
+                  can build teams that learn fast and ship with confidence. I'm drawn to
+                  cultures that value transparency, autonomy, and continuous learning, and
+                  that treat delivery as a shared craft—not a handoff. I work best in tight
+                  partnership with design and engineering: shaping direction together,
+                  pressure-testing ideas early, and making trade-offs openly. I value
+                  environments where collaboration is deliberate (clear ownership, strong
+                  rituals, high-quality critique) and where honest discussion is
+                  encouraged—so decisions are understood, teams stay aligned, and the product
+                  gets better through iteration rather than politics.
+                </p>
+                <div className="mt-6 flex flex-wrap gap-2">
+                  {["Head of Product", "VP Product", "Group PM", "Product Lead"].map(
+                    (role) => (
+                      <Badge key={role} variant="secondary" className="rounded-full">
+                        {role}
+                      </Badge>
+                    )
+                  )}
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+export default About;
