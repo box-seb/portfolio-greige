@@ -175,18 +175,15 @@ const About = () => {
                   </div>
                 </div>
 
-                <div className="mt-6 space-y-1.5 text-sm text-muted-foreground">
-                  <p>
-                    <span className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      <span><strong className="text-foreground">Masters Of Economic Sciences</strong> — Poznan University of Economics</span>
-                    </span>
+                <h3 className="mt-6 mb-3 text-base font-bold text-foreground">Education</h3>
+                <div className="space-y-1.5 text-sm text-muted-foreground">
+                  <p className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span><strong className="text-foreground">Masters Of Economic Sciences</strong> — Poznan University of Economics</span>
                   </p>
-                  <p>
-                    <span className="flex items-start gap-2">
-                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                      <span><strong className="text-foreground">Recent courses:</strong> Reforge AI Strategy, Reforge AI Leadership</span>
-                    </span>
+                  <p className="flex items-start gap-2">
+                    <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
+                    <span><strong className="text-foreground">Recent courses:</strong> Reforge AI Strategy, Reforge AI Leadership</span>
                   </p>
                 </div>
               </CardContent>
@@ -195,29 +192,40 @@ const About = () => {
 
           <motion.div variants={fadeUp} custom={2}>
             <Card className="h-full border bg-card">
-              <CardContent className="p-6 sm:p-8">
-                <h2 className="mb-4 text-lg font-bold text-foreground">What I'm looking for</h2>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  I am now looking for a role where product is expected to lead measurable
-                  outcomes—growth, retention, revenue, or step-change capability—and where I
-                  can build teams that learn fast and ship with confidence. I'm drawn to
-                  cultures that value transparency, autonomy, and continuous learning, and
-                  that treat delivery as a shared craft—not a handoff. I work best in tight
-                  partnership with design and engineering: shaping direction together,
-                  pressure-testing ideas early, and making trade-offs openly. I value
-                  environments where collaboration is deliberate (clear ownership, strong
-                  rituals, high-quality critique) and where honest discussion is
-                  encouraged—so decisions are understood, teams stay aligned, and the product
-                  gets better through iteration rather than politics.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {["Head of Product", "VP Product", "Group PM", "Product Lead"].map(
-                    (role) => (
-                      <Badge key={role} variant="secondary" className="rounded-full">
-                        {role}
-                      </Badge>
-                    )
-                  )}
+              <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
+                <div>
+                  <h2 className="mb-4 text-lg font-bold text-foreground">What I'm looking for</h2>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    I am now looking for a role where product is expected to lead measurable
+                    outcomes—growth, retention, revenue, or step-change capability—and where I
+                    can build teams that learn fast and ship with confidence.
+                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    I'm drawn to cultures that value transparency, autonomy, and continuous
+                    learning, and that treat delivery as a shared craft—not a handoff. I work
+                    best in tight partnership with design and engineering: shaping direction
+                    together, pressure-testing ideas early, and making trade-offs openly.
+                  </p>
+                  <p className="text-sm leading-relaxed text-muted-foreground">
+                    I value environments where collaboration is deliberate (clear ownership,
+                    strong rituals, high-quality critique) and where honest discussion is
+                    encouraged—so decisions are understood, teams stay aligned, and the product
+                    gets better through iteration rather than politics.
+                  </p>
+                </div>
+                <div className="mt-8">
+                  <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
+                    Roles I'm targeting
+                  </h3>
+                  <div className="flex flex-wrap gap-2">
+                    {["Head of Product", "VP Product", "Group PM", "Product Lead"].map(
+                      (role) => (
+                        <Badge key={role} variant="secondary" className="rounded-full">
+                          {role}
+                        </Badge>
+                      )
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
