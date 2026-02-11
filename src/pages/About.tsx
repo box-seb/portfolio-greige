@@ -60,7 +60,7 @@ const About = () => {
                 </div>
 
                 {/* Right: Quick Profile */}
-                <div className="lg:w-72">
+                <div className="lg:w-72 rounded-2xl border border-primary/15 bg-primary/[0.04] p-5 shadow-[0_4px_30px_rgba(99,102,241,0.08)] backdrop-blur-sm ring-1 ring-primary/5">
                   <h2 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
                     Quick Profile
                   </h2>
