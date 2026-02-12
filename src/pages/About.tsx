@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { User } from "lucide-react";
+import profileImg from "@/assets/profile.jpeg";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -28,8 +28,8 @@ const About = () => {
                 {/* Left: Avatar + Bio */}
                 <div className="flex-1">
                   <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                    <div className="flex h-28 w-28 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
-                      <User className="h-14 w-14 text-primary" />
+                    <div className="h-28 w-28 shrink-0 overflow-hidden rounded-2xl">
+                      <img src={profileImg} alt="Meg Kowalew" className="h-full w-full object-cover" />
                     </div>
                     <div className="flex-1">
                       <h1 className="mb-3 text-xl font-bold text-foreground sm:text-2xl">
@@ -215,7 +215,7 @@ const About = () => {
                 </div>
                 <div className="mt-8">
                   <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
-                    Roles I'm targeting
+                    Where I Can Add Most Value
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {["Head of Product", "VP Product", "Group PM", "Product Lead"].map(
