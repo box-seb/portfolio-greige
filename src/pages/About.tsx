@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Wrench, LayoutGrid, GraduationCap, Target, Heart, Camera, Brain, CircleDot } from "lucide-react";
+import { Wrench, LayoutGrid, GraduationCap, Target, Heart, Camera, Brain, Trophy } from "lucide-react";
 import profileImg from "@/assets/profile.jpeg";
 
 const fadeUp = {
@@ -242,7 +242,7 @@ const About = () => {
               </h2>
               <div className="space-y-5 text-sm leading-relaxed text-muted-foreground">
                 <div className="flex items-start gap-3">
-                  <CircleDot className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <Trophy className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <p>
                     <strong className="text-foreground">Tennis:</strong> playing, watching, and unapologetically nerding out. I've followed tennis for years, and finally started learning to play last year.
                   </p>
