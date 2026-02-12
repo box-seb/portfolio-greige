@@ -159,7 +159,7 @@ const About = () => {
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                        Figma, Loveable, Replit
+                        Figma, Lovable, Replit
                       </li>
                       <li className="flex items-start gap-2">
                         <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
@@ -177,7 +177,7 @@ const About = () => {
                 <div className="space-y-1.5 text-sm text-muted-foreground">
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Masters Of Economic Sciences</strong> — Poznan University of Economics</span>
+                    <span><strong className="text-foreground"><span><strong className="text-foreground">Master of Economic Sciences</strong> — Poznan University of Economics</span></strong> — Poznan University of Economics</span>
                   </p>
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
