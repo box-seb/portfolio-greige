@@ -177,7 +177,7 @@ const About = () => {
                 <div className="space-y-1.5 text-sm text-muted-foreground">
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground"><span><strong className="text-foreground">Master of Economic Sciences</strong> — Poznan University of Economics</span></strong> — Poznan University of Economics</span>
+                    <span><strong className="text-foreground">Master of Economic Sciences</strong> — Poznan University of Economics</span>
                   </p>
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
@@ -194,24 +194,19 @@ const About = () => {
                 <div>
                   <h2 className="mb-4 text-lg font-bold text-foreground flex items-center gap-2"><Target className="h-5 w-5 text-primary" /> Where I can add most value</h2>
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-                    I am now looking for a role where product is expected to lead measurable
-                    outcomes—growth, retention, revenue, or step-change capability—and where I
-                    can build teams that learn fast and ship with confidence.
+                    I'm looking for a role where product is expected to lead measurable outcomes—growth, retention, revenue, or step-change capability—and where I can build teams that learn fast and ship with confidence.
                   </p>
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
-                    I'm drawn to cultures that value transparency, autonomy, and continuous
-                    learning, and that treat delivery as a shared craft—not a handoff. I work
-                    best in tight partnership with design and engineering: shaping direction
-                    together, pressure-testing ideas early, and making trade-offs openly.
+                    I'm drawn to cultures that value transparency, autonomy, and continuous learning, and that treat delivery as a shared craft. I work best in tight partnership with design and engineering: shaping direction together, testing ideas early, and making trade-offs openly.
+                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    I value environments where collaboration is deliberate (clear ownership, strong rituals, high-quality critique) and where honest discussion is encouraged—so decisions are understood, teams stay aligned, and the product improves through iteration rather than politics.
+                  </p>
+                  <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
+                    I'm a player-coach: I lead by example and stay close to the work. That means getting hands-on in discovery, problem framing, and delivery—writing crisp product narratives, mapping workflows, defining measures of success, and partnering with engineers on trade-offs—while still creating the conditions for the team to do great work.
                   </p>
                   <p className="text-sm leading-relaxed text-muted-foreground">
-                    I value environments where collaboration is deliberate (clear ownership,
-                    strong rituals, high-quality critique) and where honest discussion is
-                    encouraged—so decisions are understood, teams stay aligned, and the product
-                    gets better through iteration rather than politics.
-                  </p>
-                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-                    I also care deeply about enabling teams to do their best work. That means giving people the context they need to make good decisions, sharing knowledge openly, and creating space for continuous learning—through coaching, thoughtful feedback, and regular reflection. I invest in both individual growth and the team's collective practice, so the way we build product keeps improving over time.
+                    I care deeply about enabling teams to do their best work: giving people context, sharing knowledge openly, and investing in growth through coaching, thoughtful feedback, and regular reflection—so our craft improves over time.
                   </p>
                 </div>
               </CardContent>
