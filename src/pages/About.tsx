@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
+import { Wrench, LayoutGrid, GraduationCap, Target } from "lucide-react";
 import profileImg from "@/assets/profile.jpeg";
 
 const fadeUp = {
@@ -113,7 +114,7 @@ const About = () => {
           <motion.div variants={fadeUp} custom={1}>
             <Card className="h-full border bg-card">
               <CardContent className="p-6 sm:p-8">
-                <h2 className="mb-4 text-lg font-bold text-foreground">How I work</h2>
+                <h2 className="mb-4 text-lg font-bold text-foreground flex items-center gap-2"><Wrench className="h-5 w-5 text-primary" /> How I work</h2>
                 <ul className="mb-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
@@ -133,7 +134,7 @@ const About = () => {
                   </li>
                 </ul>
 
-                <h3 className="mb-3 text-base font-bold text-foreground">Day-to-day</h3>
+                <h3 className="mb-3 text-base font-bold text-foreground flex items-center gap-2"><LayoutGrid className="h-4 w-4 text-primary" /> Day-to-day</h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div>
                     <h4 className="mb-2 text-sm font-semibold text-foreground">Frameworks</h4>
@@ -175,7 +176,7 @@ const About = () => {
                   </div>
                 </div>
 
-                <h3 className="mt-6 mb-3 text-base font-bold text-foreground">Education</h3>
+                <h3 className="mt-6 mb-3 text-base font-bold text-foreground flex items-center gap-2"><GraduationCap className="h-4 w-4 text-primary" /> Education</h3>
                 <div className="space-y-1.5 text-sm text-muted-foreground">
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
@@ -194,7 +195,7 @@ const About = () => {
             <Card className="h-full border bg-card">
               <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
                 <div>
-                  <h2 className="mb-4 text-lg font-bold text-foreground">What I'm looking for</h2>
+                  <h2 className="mb-4 text-lg font-bold text-foreground flex items-center gap-2"><Target className="h-5 w-5 text-primary" /> What I'm looking for</h2>
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                     I am now looking for a role where product is expected to lead measurable
                     outcomes—growth, retention, revenue, or step-change capability—and where I
