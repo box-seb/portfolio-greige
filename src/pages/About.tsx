@@ -225,19 +225,19 @@ const About = () => {
                 <div className="flex items-start gap-3">
                   <Icon iconNode={tennisRacket} className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <p>
-                    <strong className="text-foreground">Tennis:</strong> playing, watching, and unapologetically nerding out. I've followed tennis for years, and finally started learning to play last year.
+                    <span className="font-medium text-foreground">Tennis:</span> playing, watching, and unapologetically nerding out. I've followed tennis for years, and finally started learning to play last year.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Camera className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <p>
-                    <strong className="text-foreground">Photography:</strong> I try to keep my creative side busy with a camera. I enjoy landscape and wildlife photography—especially bird photography, which is a great lesson in patience.
+                    <span className="font-medium text-foreground">Photography:</span> I try to keep my creative side busy with a camera. I enjoy landscape and wildlife photography—especially bird photography, which is a great lesson in patience.
                   </p>
                 </div>
                 <div className="flex items-start gap-3">
                   <Brain className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
                   <p>
-                    <strong className="text-foreground">Cognitive psychology:</strong> I find the science of how we think, learn, and remember fascinating, and I've been deepening my knowledge of cognitive psychology for years. Decision-making patterns and biases are especially interesting to me, and highly relevant to product management and leadership. In 2020, I gave{" "}
+                    <span className="font-medium text-foreground">Cognitive psychology:</span> I find the science of how we think, learn, and remember fascinating, and I've been deepening my knowledge of cognitive psychology for years. Decision-making patterns and biases are especially interesting to me, and highly relevant to product management and leadership. In 2020, I gave{" "}
                     <a href="https://youtu.be/aejXCHpq26Q?si=i3GtCezcD34g-nvV" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">
                       a talk on cognitive biases in product management
                     </a>.
