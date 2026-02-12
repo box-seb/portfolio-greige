@@ -71,9 +71,6 @@ const Contact = () => {
                     <Button className="rounded-full" asChild>
                       <a href="/MegKowalew_CV.pdf" download>Download CV</a>
                     </Button>
-                    <Button variant="outline" className="rounded-full">
-                      View Work
-                    </Button>
                   </div>
                 </div>
               </div>
