@@ -68,8 +68,8 @@ const Contact = () => {
                     I am open to permanent or contract roles, full time or fractional.
                   </p>
                   <div className="flex flex-wrap gap-3">
-                    <Button className="rounded-full">
-                      Download CV
+                    <Button className="rounded-full" asChild>
+                      <a href="/MegKowalew_CV.pdf" download>Download CV</a>
                     </Button>
                     <Button variant="outline" className="rounded-full">
                       View Work

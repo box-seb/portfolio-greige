@@ -30,9 +30,11 @@ const Layout = () => {
             >
               Contact
             </NavLink>
-            <Button size="sm" className="rounded-full">
-              <Download className="mr-1.5 h-3.5 w-3.5" />
-              Download CV
+            <Button size="sm" className="rounded-full" asChild>
+              <a href="/MegKowalew_CV.pdf" download>
+                <Download className="mr-1.5 h-3.5 w-3.5" />
+                Download CV
+              </a>
             </Button>
           </div>
         </nav>
@@ -50,7 +52,8 @@ const Layout = () => {
           </p>
           <div className="flex gap-4">
             <a
-              href="#"
+              href="/MegKowalew_CV.pdf"
+              download
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               CV (PDF)
