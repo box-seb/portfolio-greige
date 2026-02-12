@@ -177,11 +177,11 @@ const About = () => {
                 <div className="space-y-1.5 text-sm text-muted-foreground">
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Master of Economic Sciences</strong> — Poznan University of Economics</span>
+                    <span><span className="font-medium text-foreground">Master of Economic Sciences</span> — Poznan University of Economics</span>
                   </p>
                   <p className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Recent courses:</strong> Reforge AI Strategy, Reforge AI Leadership</span>
+                    <span><span className="font-medium text-foreground">Recent courses:</span> Reforge AI Strategy, Reforge AI Leadership, Reforge AI Growth</span>
                   </p>
                 </div>
               </CardContent>
