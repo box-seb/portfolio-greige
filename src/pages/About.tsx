@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { motion } from "framer-motion";
-import { Wrench, LayoutGrid, GraduationCap, Target } from "lucide-react";
+import { Wrench, LayoutGrid, GraduationCap, Target, Heart, Camera, Brain } from "lucide-react";
 import profileImg from "@/assets/profile.jpeg";
 
 const fadeUp = {
@@ -232,6 +232,40 @@ const About = () => {
             </Card>
           </motion.div>
         </div>
+
+        {/* Beyond work */}
+        <motion.div variants={fadeUp} custom={3} className="mt-8">
+          <Card className="border bg-card">
+            <CardContent className="p-6 sm:p-8">
+              <h2 className="mb-6 text-lg font-bold text-foreground flex items-center gap-2">
+                <Heart className="h-5 w-5 text-primary" /> Beyond work
+              </h2>
+              <div className="space-y-5 text-sm leading-relaxed text-muted-foreground">
+                <div className="flex items-start gap-3">
+                  <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">🎾</span>
+                  <p>
+                    <strong className="text-foreground">Tennis:</strong> playing, watching, and unapologetically nerding out. I've followed tennis for years, and finally started learning to play last year.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Camera className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <p>
+                    <strong className="text-foreground">Photography:</strong> I try to keep my creative side busy with a camera. I enjoy landscape and wildlife photography—especially bird photography, which is a great lesson in patience.
+                  </p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <Brain className="mt-0.5 h-5 w-5 shrink-0 text-primary" />
+                  <p>
+                    <strong className="text-foreground">Cognitive psychology:</strong> I find the science of how we think, learn, and remember fascinating, and I've been deepening my knowledge of cognitive psychology for years. Decision-making patterns and biases are especially interesting to me, and highly relevant to product management and leadership. In 2020, I gave{" "}
+                    <a href="https://youtu.be/aejXCHpq26Q?si=i3GtCezcD34g-nvV" target="_blank" rel="noopener noreferrer" className="font-medium text-primary underline underline-offset-2 hover:text-primary/80 transition-colors">
+                      a talk on cognitive biases in product management
+                    </a>.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.div>
       </motion.div>
     </div>
   );
