@@ -115,19 +115,19 @@ const About = () => {
                 <ul className="mb-6 space-y-3 text-sm leading-relaxed text-muted-foreground">
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Clear about trade-offs and outcomes.</strong> I explain what we're choosing, what we're not, and why. I'm open about what worked and what didn't so we can learn quickly.</span>
+                    <span><span className="font-medium text-foreground">Clear about trade-offs and outcomes.</span> I explain what we're choosing, what we're not, and why. I'm open about what worked and what didn't so we can learn quickly.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Pragmatic.</strong> I do enough to reduce risk and unblock delivery, but I don't let process become the work.</span>
+                    <span><span className="font-medium text-foreground">Pragmatic.</span> I do enough to reduce risk and unblock delivery, but I don't let process become the work.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Close to users.</strong> I spend time understanding their context and constraints, not just what they click. That empathy shapes better decisions.</span>
+                    <span><span className="font-medium text-foreground">Close to users.</span> I spend time understanding their context and constraints, not just what they click. That empathy shapes better decisions.</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                    <span><strong className="text-foreground">Create culture in the day-to-day.</strong> Be clear on what matters, say the hard things kindly, and do what we said we'd do.</span>
+                    <span><span className="font-medium text-foreground">Create culture in the day-to-day.</span> Be clear on what matters, say the hard things kindly, and do what we said we'd do.</span>
                   </li>
                 </ul>
 
