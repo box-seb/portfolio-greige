@@ -35,20 +35,16 @@ const About = () => {
                     </div>
                     <div className="flex-1">
                       <h1 className="mb-3 text-xl font-bold text-foreground sm:text-2xl">
-                        Product leader across SaaS, Marketplace and Payments
+                      Product leader across SaaS, Marketplace and Payments
                       </h1>
                       <p className="text-sm leading-relaxed text-muted-foreground">
-                        Product leader with 15 years of turning vision into outcomes. I've run
-                        cross-functional teams and entire product suites—setting strategy,
-                        coaching PMs and designers, and shipping software that moves the
-                        numbers. Most recently I owned the product experience at New
-                        Zealand's top-rated real-estate app, and its supporting platform. I
-                        have experience translating user needs of enterprise groups into
-                        scalable B2B across SaaS products, payments, real estate and
-                        ecommerce solutions while keeping the consumer front and centre. I
-                        empower teams to discover, validate and launch work that delivers
-                        user value first and business value right behind it. I have recently
-                        relocated to Melbourne and ready for my next challenge.
+                        I'm a product leader with 15 years across SaaS, marketplace and payments businesses, building customer experiences people return to. I've led cross-functional teams from strategy through delivery: setting direction through roadmaps and OKRs, running discovery, coaching PMs and designers, and partnering with engineering, data, sales and customer teams to improve the metrics that matter—activation, engagement, retention and growth.
+                      </p>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        Most recently, owned the end-to-end product experience for top-rated NZ property app and the platform behind it, balancing a high-quality consumer experience with enterprise and industry requirements. I thrive in ambiguous problem spaces where clarity must be created through research, insight and prioritisation.
+                      </p>
+                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                        Now based in Melbourne, I'm looking for a role where product is expected to lead outcomes while building a team that learns fast and ships with confidence.
                       </p>
                       <div className="mt-4 flex flex-wrap gap-2">
                         {["SaaS", "Payments", "Marketplace", "PropTech"].map((tag) => (
@@ -196,7 +192,7 @@ const About = () => {
             <Card className="h-full border bg-card">
               <CardContent className="p-6 sm:p-8 flex flex-col justify-between h-full">
                 <div>
-                  <h2 className="mb-4 text-lg font-bold text-foreground flex items-center gap-2"><Target className="h-5 w-5 text-primary" /> What I'm looking for</h2>
+                  <h2 className="mb-4 text-lg font-bold text-foreground flex items-center gap-2"><Target className="h-5 w-5 text-primary" /> Where I can add most value</h2>
                   <p className="mb-4 text-sm leading-relaxed text-muted-foreground">
                     I am now looking for a role where product is expected to lead measurable
                     outcomes—growth, retention, revenue, or step-change capability—and where I
@@ -214,20 +210,9 @@ const About = () => {
                     encouraged—so decisions are understood, teams stay aligned, and the product
                     gets better through iteration rather than politics.
                   </p>
-                </div>
-                <div className="mt-8">
-                  <h3 className="mb-3 text-xs font-semibold uppercase tracking-widest text-primary">
-                    Where I Can Add Most Value
-                  </h3>
-                  <div className="flex flex-wrap gap-2">
-                    {["Head of Product", "VP Product", "Group PM", "Product Lead"].map(
-                      (role) => (
-                        <Badge key={role} variant="secondary" className="rounded-full">
-                          {role}
-                        </Badge>
-                      )
-                    )}
-                  </div>
+                  <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+                    I also care deeply about enabling teams to do their best work. That means giving people the context they need to make good decisions, sharing knowledge openly, and creating space for continuous learning—through coaching, thoughtful feedback, and regular reflection. I invest in both individual growth and the team's collective practice, so the way we build product keeps improving over time.
+                  </p>
                 </div>
               </CardContent>
             </Card>
