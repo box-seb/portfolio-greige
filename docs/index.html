@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meg Kowalew — Product Leader</title>
+  <meta name="description" content="Product leader with 15 years across SaaS, marketplace and payments. Melbourne-based." />
+  <meta name="author" content="Meg Kowalew" />
+  <meta property="og:title" content="Meg Kowalew — Product Leader" />
+  <meta property="og:description" content="Product leader with 15 years across SaaS, marketplace and payments." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: hsl(40 10% 94%);
+      --fg: hsl(240 10% 15%);
+      --card: hsl(40 8% 97%);
+      --primary: hsl(239 84% 67%);
+      --primary-fg: hsl(0 0% 100%);
+      --secondary: hsl(40 8% 90%);
+      --muted: hsl(240 5% 46%);
+      --border: hsl(40 8% 85%);
+      --radius: 0.5rem;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--fg);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    .header {
+      position: sticky; top: 0; z-index: 40;
+      border-bottom: 1px solid var(--border);
+      background: hsla(40, 10%, 94%, 0.8);
+      backdrop-filter: blur(12px);
+    }
+    .nav {
+      max-width: 64rem; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 4rem; padding: 0 1.5rem;
+    }
+    .nav-brand { font-size: 1.125rem; font-weight: 600; letter-spacing: -0.025em; }
+    .nav-links { display: flex; align-items: center; gap: 0.75rem; }
+    .nav-link {
+      padding: 0.5rem 1rem; border-radius: 9999px;
+      font-size: 0.875rem; color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-link:hover { color: var(--fg); }
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.375rem;
+      padding: 0.5rem 1rem; border-radius: 9999px;
+      font-size: 0.875rem; font-weight: 500;
+      background: var(--primary); color: var(--primary-fg);
+      border: none; cursor: pointer; transition: opacity 0.2s;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn-secondary {
+      background: var(--secondary); color: var(--fg);
+    }
+    .btn-secondary:hover { background: var(--primary); color: var(--primary-fg); }
+
+    /* Card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .card-inner { padding: 1.5rem; }
+    @media (min-width: 640px) { .card-inner { padding: 2rem; } }
+
+    /* Badge */
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem; border-radius: 9999px;
+      font-size: 0.875rem; font-weight: 500;
+      background: var(--secondary); color: var(--fg);
+    }
+
+    /* Layout */
+    .container { max-width: 64rem; margin: 0 auto; padding: 0 1.5rem; }
+    .section { padding: 3rem 0; }
+    @media (min-width: 640px) { .section { padding: 4rem 0; } }
+    .mb-2 { margin-bottom: 0.5rem; }
+    .mb-3 { margin-bottom: 0.75rem; }
+    .mb-4 { margin-bottom: 1rem; }
+    .mb-5 { margin-bottom: 1.25rem; }
+    .mb-6 { margin-bottom: 1.5rem; }
+    .mb-8 { margin-bottom: 2rem; }
+    .mt-3 { margin-top: 0.75rem; }
+    .mt-4 { margin-top: 1rem; }
+    .mt-6 { margin-top: 1.5rem; }
+    .mt-8 { margin-top: 2rem; }
+
+    /* Flex / Grid */
+    .flex { display: flex; }
+    .flex-col { flex-direction: column; }
+    .flex-wrap { flex-wrap: wrap; }
+    .items-center { align-items: center; }
+    .items-start { align-items: start; }
+    .justify-between { justify-content: space-between; }
+    .gap-2 { gap: 0.5rem; }
+    .gap-3 { gap: 0.75rem; }
+    .gap-4 { gap: 1rem; }
+    .gap-6 { gap: 1.5rem; }
+    .gap-8 { gap: 2rem; }
+
+    .grid { display: grid; }
+    .grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    @media (min-width: 640px) {
+      .sm-flex-row { flex-direction: row; }
+      .sm-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .lg-flex-row { flex-direction: row; }
+      .lg-grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    /* Text */
+    .text-xs { font-size: 0.75rem; }
+    .text-sm { font-size: 0.875rem; }
+    .text-lg { font-size: 1.125rem; }
+    .text-xl { font-size: 1.25rem; }
+    .text-2xl { font-size: 1.5rem; }
+    .text-3xl { font-size: 1.875rem; }
+    .text-4xl { font-size: 2.25rem; }
+    .font-medium { font-weight: 500; }
+    .font-semibold { font-weight: 600; }
+    .font-bold { font-weight: 700; }
+    .text-muted { color: var(--muted); }
+    .text-primary { color: var(--primary); }
+    .tracking-widest { letter-spacing: 0.1em; }
+    .uppercase { text-transform: uppercase; }
+    .leading-relaxed { line-height: 1.75; }
+
+    /* Avatar */
+    .avatar {
+      width: 7rem; height: 7rem; flex-shrink: 0;
+      border-radius: 1rem; overflow: hidden;
+    }
+    .avatar img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Bullet */
+    .bullet {
+      display: inline-block; width: 0.375rem; height: 0.375rem;
+      border-radius: 9999px; background: var(--primary);
+      flex-shrink: 0; margin-top: 0.5rem;
+    }
+
+    /* Quick profile box */
+    .profile-box {
+      border-radius: 1rem;
+      border: 1px solid hsla(239, 84%, 67%, 0.15);
+      background: hsla(239, 84%, 67%, 0.04);
+      padding: 1.25rem;
+      box-shadow: 0 4px 30px rgba(99,102,241,0.08);
+    }
+    @media (min-width: 1024px) { .profile-box { width: 18rem; } }
+
+    /* List */
+    .bullet-list { list-style: none; }
+    .bullet-list li { display: flex; align-items: start; gap: 0.5rem; }
+    .bullet-list.spaced li + li { margin-top: 0.5rem; }
+    .bullet-list.spaced-md li + li { margin-top: 0.75rem; }
+
+    /* Icon placeholder */
+    .icon {
+      display: inline-flex; width: 1.25rem; height: 1.25rem;
+      flex-shrink: 0; color: var(--primary);
+    }
+    .icon-sm { width: 1rem; height: 1rem; }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+    }
+    .footer-inner {
+      max-width: 64rem; margin: 0 auto; padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+
+    /* Contact detail card */
+    .detail-card { background: var(--bg); }
+
+    /* Copy button */
+    .copy-btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 0.375rem; border-radius: var(--radius);
+      border: none; background: transparent; cursor: pointer;
+      color: var(--muted); transition: background 0.2s, color 0.2s;
+      margin-left: 0.5rem;
+    }
+    .copy-btn:hover { background: var(--secondary); color: var(--fg); }
+
+    /* Link style */
+    .link-primary {
+      color: var(--primary); font-weight: 500;
+      text-decoration: underline; text-underline-offset: 2px;
+      transition: opacity 0.2s;
+    }
+    .link-primary:hover { opacity: 0.8; }
+
+    /* Responsive nav */
+    @media (max-width: 639px) {
+      .nav-link { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav-brand" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'})">Meg Kowalew</a>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="MegKowalew_CV.pdf" download class="btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download CV
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ABOUT SECTION -->
+    <section id="about" class="section">
+      <div class="container">
+
+        <!-- Hero card -->
+        <div class="card mb-8">
+          <div class="card-inner">
+            <div class="flex flex-col lg-flex-row gap-8">
+              <!-- Left: Avatar + Bio -->
+              <div style="flex:1">
+                <div class="flex flex-col sm-flex-row gap-6 items-start">
+                  <div class="avatar">
+                    <img src="profile.jpeg" alt="Meg Kowalew" />
+                  </div>
+                  <div style="flex:1">
+                    <h1 class="mb-3" style="font-size:1.5rem;font-weight:700">Product leader across SaaS, Marketplace and Payments</h1>
+                    <p class="text-sm leading-relaxed text-muted">
+                      I'm a product leader with 15 years across SaaS, marketplace and payments businesses, building customer experiences people return to. I've led cross-functional teams from strategy through delivery: setting direction through roadmaps and OKRs, running discovery, coaching PMs and designers, and partnering with engineering, data, sales and customer teams to improve the metrics that matter—activation, engagement, retention and growth.
+                    </p>
+                    <p class="text-sm leading-relaxed text-muted mt-3">
+                      Most recently, owned the end-to-end product experience for top-rated NZ property app and the platform behind it, balancing a high-quality consumer experience with enterprise and industry requirements. I thrive in ambiguous problem spaces where clarity must be created through research, insight and prioritisation.
+                    </p>
+                    <p class="text-sm leading-relaxed text-muted mt-3">
+                      Now based in Melbourne, I'm looking for a role where product is expected to lead outcomes while building a team that learns fast and ships with confidence.
+                    </p>
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="badge">SaaS</span>
+                      <span class="badge">Payments</span>
+                      <span class="badge">Marketplace</span>
+                      <span class="badge">PropTech</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right: Quick Profile -->
+              <div class="profile-box">
+                <h2 class="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Quick Profile</h2>
+                <ul class="bullet-list spaced text-sm text-muted">
+                  <li><span class="bullet"></span> 15+ product management experience</li>
+                  <li><span class="bullet"></span> Product strategy: vision → roadmap → outcomes</li>
+                  <li><span class="bullet"></span> Positioning &amp; pricing</li>
+                  <li><span class="bullet"></span> B2C, B2B, and B2B2C models</li>
+                  <li><span class="bullet"></span> Acquisition and post-merger integration</li>
+                  <li><span class="bullet"></span> AI-powered recommendations and personalisation</li>
+                  <li><span class="bullet"></span> Mobile apps, websites, and internal tools/workflows</li>
+                  <li><span class="bullet"></span> User research practice; discovery coaching</li>
+                  <li><span class="bullet"></span> Melbourne-based</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- How I work + Where I can add most value -->
+        <div class="grid gap-8 lg-grid-cols-2">
+
+          <!-- How I work -->
+          <div class="card" style="height:100%">
+            <div class="card-inner">
+              <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                How I work
+              </h2>
+              <ul class="bullet-list spaced-md text-sm leading-relaxed text-muted mb-6">
+                <li><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Clear about trade-offs and outcomes.</span> I explain what we're choosing, what we're not, and why. I'm open about what worked and what didn't so we can learn quickly.</span></li>
+                <li><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Pragmatic.</span> I do enough to reduce risk and unblock delivery, but I don't let process become the work.</span></li>
+                <li><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Close to users.</span> I spend time understanding their context and constraints, not just what they click. That empathy shapes better decisions.</span></li>
+                <li><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Create culture in the day-to-day.</span> Be clear on what matters, say the hard things kindly, and do what we said we'd do.</span></li>
+              </ul>
+
+              <h3 class="font-bold mb-3 flex items-center gap-2">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+                Day-to-day
+              </h3>
+              <div class="grid grid-cols-2 gap-6">
+                <div>
+                  <h4 class="text-sm font-semibold mb-2">Frameworks</h4>
+                  <ul class="bullet-list spaced text-sm text-muted">
+                    <li><span class="bullet"></span> North-star metrics, OKRs, outcome roadmaps</li>
+                    <li><span class="bullet"></span> Assumptions mapping, experiment design, AB testing</li>
+                    <li><span class="bullet"></span> Growth loops</li>
+                  </ul>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold mb-2">Tools</h4>
+                  <ul class="bullet-list spaced text-sm text-muted">
+                    <li><span class="bullet"></span> Jira, Confluence, Miro, Productboard, Roadmunk</li>
+                    <li><span class="bullet"></span> Figma, Lovable, Replit</li>
+                    <li><span class="bullet"></span> HotJar, Maze, UserTesting</li>
+                    <li><span class="bullet"></span> AirOps, Braze</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 class="font-bold mt-6 mb-3 flex items-center gap-2">
+                <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                Education
+              </h3>
+              <div class="text-sm text-muted" style="display:flex;flex-direction:column;gap:0.375rem">
+                <p class="flex items-start gap-2"><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Master of Economic Sciences</span> — Poznan University of Economics</span></p>
+                <p class="flex items-start gap-2"><span class="bullet"></span><span><span class="font-medium" style="color:var(--fg)">Recent courses:</span> Reforge AI Strategy, Reforge AI Leadership, Reforge AI Growth</span></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Where I can add most value -->
+          <div class="card" style="height:100%">
+            <div class="card-inner">
+              <h2 class="text-lg font-bold mb-4 flex items-center gap-2">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                Where I can add most value
+              </h2>
+              <p class="text-sm leading-relaxed text-muted mb-4">
+                I'm looking for a role where product is expected to lead measurable outcomes—growth, retention, revenue, or step-change capability—and where I can build teams that learn fast and ship with confidence.
+              </p>
+              <p class="text-sm leading-relaxed text-muted mb-4">
+                I'm drawn to cultures that value transparency, autonomy, and continuous learning, and that treat delivery as a shared craft. I work best in tight partnership with design and engineering: shaping direction together, testing ideas early, and making trade-offs openly.
+              </p>
+              <p class="text-sm leading-relaxed text-muted mb-4">
+                I value environments where collaboration is deliberate (clear ownership, strong rituals, high-quality critique) and where honest discussion is encouraged—so decisions are understood, teams stay aligned, and the product improves through iteration rather than politics.
+              </p>
+              <p class="text-sm leading-relaxed text-muted mb-4">
+                I'm a player-coach: I lead by example and stay close to the work. That means getting hands-on in discovery, problem framing, and delivery—writing crisp product narratives, mapping workflows, defining measures of success, and partnering with engineers on trade-offs—while still creating the conditions for the team to do great work.
+              </p>
+              <p class="text-sm leading-relaxed text-muted">
+                I care deeply about enabling teams to do their best work: giving people context, sharing knowledge openly, and investing in growth through coaching, thoughtful feedback, and regular reflection—so our craft improves over time.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Beyond work -->
+        <div class="card mt-8">
+          <div class="card-inner">
+            <h2 class="text-lg font-bold mb-6 flex items-center gap-2">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+              Beyond work
+            </h2>
+            <div style="display:flex;flex-direction:column;gap:1.25rem" class="text-sm leading-relaxed text-muted">
+              <div class="flex items-start gap-3">
+                <svg class="icon" style="margin-top:0.125rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/><circle cx="12" cy="12" r="4"/></svg>
+                <p><span class="font-medium" style="color:var(--fg)">Tennis:</span> playing, watching, and unapologetically nerding out. I've followed tennis for years, and finally started learning to play last year.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="icon" style="margin-top:0.125rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+                <p><span class="font-medium" style="color:var(--fg)">Photography:</span> I try to keep my creative side busy with a camera. I enjoy landscape and wildlife photography—especially bird photography, which is a great lesson in patience.</p>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="icon" style="margin-top:0.125rem" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M12 18a5 5 0 0 0 0-10"/></svg>
+                <p><span class="font-medium" style="color:var(--fg)">Cognitive psychology:</span> I find the science of how we think, learn, and remember fascinating, and I've been deepening my knowledge of cognitive psychology for years. Decision-making patterns and biases are especially interesting to me, and highly relevant to product management and leadership. In 2020, I gave <a href="https://youtu.be/aejXCHpq26Q?si=i3GtCezcD34g-nvV" target="_blank" rel="noopener noreferrer" class="link-primary">a talk on cognitive biases in product management</a>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="section">
+      <div class="container">
+
+        <!-- Contact hero -->
+        <div class="card mb-8">
+          <div class="card-inner">
+            <div class="flex flex-col sm-flex-row items-center gap-6">
+              <div class="avatar">
+                <img src="profile.jpeg" alt="Meg Kowalew" />
+              </div>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-widest text-primary mb-2">Contact</p>
+                <h2 class="mb-3" style="font-size:1.875rem;font-weight:700">Let's talk.</h2>
+                <p class="text-muted mb-5">I am open to permanent or contract roles, full time or fractional.</p>
+                <a href="MegKowalew_CV.pdf" download class="btn">Download CV</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div class="card">
+          <div class="card-inner">
+            <h2 class="text-lg font-bold mb-6">Details</h2>
+            <div class="grid gap-4 sm-grid-cols-2">
+
+              <!-- Email -->
+              <div class="card detail-card">
+                <div class="card-inner" style="padding:1.25rem">
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    <h3 class="text-sm font-semibold">Email</h3>
+                  </div>
+                  <div class="flex items-center">
+                    <a href="mailto:meg.kowalew@gmail.com" class="badge btn-secondary" style="font-weight:400">meg.kowalew@gmail.com</a>
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText('meg.kowalew@gmail.com');this.innerHTML='✓';setTimeout(()=>{this.innerHTML='⧉'},2000)" aria-label="Copy email">⧉</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="card detail-card">
+                <div class="card-inner" style="padding:1.25rem">
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    <h3 class="text-sm font-semibold">Phone</h3>
+                  </div>
+                  <div class="flex items-center">
+                    <a href="tel:+61403070049" class="badge btn-secondary" style="font-weight:400">+61 403 070 049</a>
+                    <button class="copy-btn" onclick="navigator.clipboard.writeText('+61 403 070 049');this.innerHTML='✓';setTimeout(()=>{this.innerHTML='⧉'},2000)" aria-label="Copy phone">⧉</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- LinkedIn -->
+              <div class="card detail-card">
+                <div class="card-inner" style="padding:1.25rem">
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    <h3 class="text-sm font-semibold">LinkedIn</h3>
+                  </div>
+                  <a href="https://www.linkedin.com/in/meg-ma%C5%82gorzata-kowalew-10ab471b/" target="_blank" rel="noopener noreferrer" class="badge btn-secondary" style="font-weight:400">LinkedIn Profile</a>
+                </div>
+              </div>
+
+              <!-- Location -->
+              <div class="card detail-card">
+                <div class="card-inner" style="padding:1.25rem">
+                  <div class="flex items-center gap-2 mb-2">
+                    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <h3 class="text-sm font-semibold">Location</h3>
+                  </div>
+                  <span class="badge mb-2" style="display:inline-block">Melbourne, Australia</span>
+                  <p class="text-sm text-muted">Available for hybrid, on site or fully remote roles.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="text-sm text-muted">© 2026 Meg Kowalew</p>
+      <div class="flex gap-4 items-center">
+        <a href="MegKowalew_CV.pdf" download class="text-sm text-muted" style="transition:color 0.2s" onmouseover="this.style.color='var(--fg)'" onmouseout="this.style.color=''">CV (PDF)</a>
+        <span class="text-sm text-muted">·</span>
+        <a href="#contact" class="text-sm text-muted" style="transition:color 0.2s" onmouseover="this.style.color='var(--fg)'" onmouseout="this.style.color=''">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
