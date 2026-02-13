@@ -1,7 +1,7 @@
-import { NavLink } from "@/components/NavLink";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
-import { Outlet } from "react-router-dom";
+import About from "@/pages/About";
+import Contact from "@/pages/Contact";
 
 const Layout = () => {
   return (
@@ -9,27 +9,26 @@ const Layout = () => {
       {/* Navigation */}
       <header className="sticky top-0 z-40 border-b bg-background/80 backdrop-blur-sm">
         <nav className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6">
-          <NavLink
-            to="/"
+          <a
+            href="#"
             className="text-lg font-semibold tracking-tight text-foreground"
+            onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}
           >
             Meg Kowalew
-          </NavLink>
+          </a>
           <div className="flex items-center gap-3">
-            <NavLink
-              to="/"
+            <a
+              href="#about"
               className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              activeClassName="bg-secondary text-foreground"
             >
               About
-            </NavLink>
-            <NavLink
-              to="/contact"
+            </a>
+            <a
+              href="#contact"
               className="rounded-full px-4 py-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
-              activeClassName="bg-secondary text-foreground"
             >
               Contact
-            </NavLink>
+            </a>
             <Button size="sm" className="rounded-full" asChild>
               <a href="/MegKowalew_CV.pdf" download>
                 <Download className="mr-1.5 h-3.5 w-3.5" />
@@ -41,7 +40,12 @@ const Layout = () => {
       </header>
 
       <main className="flex-1">
-        <Outlet />
+        <section id="about">
+          <About />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </main>
 
       {/* Footer */}
@@ -59,12 +63,12 @@ const Layout = () => {
               CV (PDF)
             </a>
             <span className="text-sm text-muted-foreground">·</span>
-            <NavLink
-              to="/contact"
+            <a
+              href="#contact"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
               Contact
-            </NavLink>
+            </a>
           </div>
         </div>
       </footer>
